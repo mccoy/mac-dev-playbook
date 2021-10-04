@@ -10,7 +10,10 @@ This playbook installs and configures most of the software I use on my Mac for w
 
 ## Installation
 
-  1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
+  1. Check that preliminary steps have been completed:
+    1. Perform basic setup including creating an account, icloud login, enable filevault, and set hostname
+    2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer)
+    3. For Apple silicon, ensure Rosetta is installed (`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`)
   2. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
      1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
@@ -23,6 +26,13 @@ This playbook installs and configures most of the software I use on my Mac for w
 
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
+> Note: You can set the hostname using System Preferences > Sharing but a more complete name config can be performed with the following commands:
+> # sudo scutil --set ComputerName "name"
+> $ sudo scutil --set LocalHostName "name"
+> $ sudo scutil --set HostName "name"
+>
+> The LocalHostName is for Rendezvous/Bonjour and cannot have spaces and is all alphanumeric and HostName is the unit hostname so must follow the standard rules for such names.
+
 ### Use with a remote Mac
 
 You can use this playbook to manage other Macs as well; the playbook doesn't even need to be run from a Mac at all! If you want to manage a remote Mac, either another Mac on your network, or a hosted Mac like the ones from [MacStadium](https://www.macstadium.com), you just need to make sure you can connect to it with SSH:
@@ -33,6 +43,10 @@ You can use this playbook to manage other Macs as well; the playbook doesn't eve
 > You can also enable remote login on the command line:
 >
 >     sudo systemsetup -setremotelogin on
+>
+> This requires 'Full Disk Access' permission to be granted to Terminal in order to set via
+> CLI.  This permission cannot be granted via CLI and you must use System Prefernces > Security 
+> & Privacy > Privacy and add Terminal to the list of applicaitons that have Full Disk Access.
 
 Then edit the `inventory` file in this repository and change the line that starts with `127.0.0.1` to:
 
