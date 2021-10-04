@@ -1,8 +1,10 @@
-<img src="https://raw.githubusercontent.com/geerlingguy/mac-dev-playbook/master/files/Mac-Dev-Playbook-Logo.png" width="250" height="156" alt="Mac Dev Playbook Logo" />
+<img src="https://raw.githubusercontent.com/mccoy/mac-dev-playbook/master/files/Mac-Dev-Playbook-Logo.png" width="250" height="156" alt="Mac Dev Playbook Logo" />
 
 # Mac Development Ansible Playbook
 
 [![CI][badge-gh-actions]][link-gh-actions]
+
+Private fork of [Jeff Geerling's Mac Dev Playbook](https://github.com/geerlingguy/mac-dev-playbook)
 
 This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have a few manual installation steps, but at least it's all documented here.
 
@@ -15,7 +17,7 @@ This playbook installs and configures most of the software I use on my Mac for w
      2. Upgrade Pip: `sudo pip3 install --upgrade pip`
      3. Install Ansible: `pip3 install ansible`
 
-  3. Clone or download this repository to your local drive.
+  3. Clone or download this repository to your local drive. If starting on a clean system you will not have git so you may need to use rsync to get a local copy.
   4. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
   5. Run `ansible-playbook main.yml --ask-become-pass` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
 
