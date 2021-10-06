@@ -39,6 +39,7 @@ You can use this playbook to manage other Macs as well; the playbook doesn't eve
 
   1. (On the Mac you want to connect to:) Go to System Preferences > Sharing.
   2. Enable 'Remote Login'.
+  3. Push a local ssh pubkey into the .authorized_keys file of the remote system
 
 > You can also enable remote login on the command line:
 >
