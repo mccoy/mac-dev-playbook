@@ -32,8 +32,8 @@ dockitems_persist:
 - name: "Firefox"
   path: "/Applications/Firefox.app/"
   pos: 2
-- name: "iTerm2"
-  path: "/Applications/iTerm2.app/"
+- name: "iTerm"
+  path: "/Applications/iTerm.app/"
   pos: 3
 - name: "PyCharm"
   path: "/Applications/PyCharm.app/"
