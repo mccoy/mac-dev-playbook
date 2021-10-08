@@ -27,7 +27,7 @@ This playbook installs and configures most of the software I use on my Mac for w
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
 > Note: You can set the hostname using System Preferences > Sharing but a more complete name config can be performed with the following commands:
-> # sudo scutil --set ComputerName "name"
+> $ sudo scutil --set ComputerName "name"
 > $ sudo scutil --set LocalHostName "name"
 > $ sudo scutil --set HostName "name"
 >

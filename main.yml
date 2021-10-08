@@ -1,14 +1,15 @@
 ---
 - hosts: all
 
-  vars_files:
-    - default.config.yml
-
   pre_tasks:
     - name: Include playbook configuration.
-      include_vars: "{{ item }}"
-      with_fileglob:
-        - "{{ playbook_dir }}/config.yml"
+      include_vars: "{{ lookup('first_found', params) }}"
+      vars:
+        params:
+          files:
+            - "{{ playbook_dir }}/config.yml.{{ lookup('env','USER') }}"
+            - "{{ playbook_dir }}/config.yml"
+            - "{{ playbook_dir }}/default.config.yml"
       tags: ['always']
 
   roles:
@@ -41,9 +42,9 @@
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
 
-    - import_tasks: tasks/sublime-text.yml
-      when: configure_sublime
-      tags: ['sublime-text']
+#    - import_tasks: tasks/sublime-text.yml
+#      when: configure_sublime
+#      tags: ['sublime-text']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"
