@@ -120,7 +120,6 @@ homebrew_cask_apps:
   - blockblock
   - chromedriver
   - docker
-  - dropbox
   - eloston-chromium
   - firefox
   - google-chrome
