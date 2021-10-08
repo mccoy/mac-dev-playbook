@@ -119,6 +119,7 @@ homebrew_cask_apps:
   - alfred
   - bartender
   - blockblock
+  - bookmacster
   - chromedriver
   - docker
   - eloston-chromium
