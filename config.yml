@@ -125,6 +125,7 @@ homebrew_cask_apps:
   - eloston-chromium
   - firefox
   - google-chrome
+  - google-drive
   - grandperspective
   - handbrake
   - iterm2
