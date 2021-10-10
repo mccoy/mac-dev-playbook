@@ -98,5 +98,10 @@ pip_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
 
+# Set to 'true' to configure Visual Studio Code.
+configure_vscode: false
+vscode_extensions:
+  - ms-python.python
+
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []

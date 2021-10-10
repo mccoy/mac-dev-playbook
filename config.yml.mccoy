@@ -119,6 +119,7 @@ homebrew_cask_apps:
   - alfred
   - bartender
   - blockblock
+  - bookmacster
   - chromedriver
   - docker
   - eloston-chromium
@@ -146,6 +147,7 @@ homebrew_cask_apps:
   - vagrant
 #  - virtualbox
   - vlc
+  - vscodium
   - zoom
   # some quicklook plugins
   - qlcolorcode
@@ -193,6 +195,15 @@ pip_packages: []
 # - name: mkdocs
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
+
+# Set to 'true' to configure Visual Studio Code.
+configure_vscode: true
+vscode_extensions:
+  - ms-python.python
+  - shd101wyy.markdown-preview-enhanced
+  - dbaeumer.vscode-eslint
+  - redhat.ansible
+  - 4ops.terraform
 
 # post-install step we need to perform is installing rosetta on M1 silicon
 # "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"
