@@ -1,11 +1,30 @@
 ---
-- name: Ensure vs code is installed by check for the cli
+- name: Pre check for cli tool
+  set_fact:
+    code_bin: 'unknown'
+
+- name: Stat for code cli
   stat:
     path: /opt/homebrew/bin/code
   register: stat_result
 
+- name: The code cli tool was found
+  set_fact:
+    code_bin: /opt/homebrew/bin/code
+  when: stat_result.stat.exists
+
+- name: Stat for codium cli
+  stat:
+    path: /opt/homebrew/bin/codium
+  register: stat_result
+
+- name: The codium tool was found
+  set_fact:
+    code_bin: /opt/homebrew/bin/codium
+  when: stat_result.stat.exists
+
 - name: Install VS Code extensions
-  command: "/opt/homebrew/bin/code --install-extension {{ item }}"
+  command: "{{ code_bin }} --install-extension {{ item }}"
   loop:
     - "{{ vscode_extensions }}"
-  when: stat_result.stat.exists
+  when: code_bin != 'unknown'
