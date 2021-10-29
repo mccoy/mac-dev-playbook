@@ -1,0 +1,10 @@
+---
+- name: Stat for existing .oh-my-zsh dir
+  stat:
+    path: ~/.oh-my-zsh
+  register: oh_my_zsh
+
+- name: Install oh-my-zsh
+  shell: 'sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended'
+  when: not oh_my_zsh.stat.exists
+

@@ -35,9 +35,17 @@
       when: configure_terminal
       tags: ['terminal']
 
+    - import_tasks: tasks/zsh.yml
+      when: configure_zsh
+      tags: ['zsh']
+
     - import_tasks: tasks/osx.yml
       when: configure_osx
       tags: ['osx']
+
+    - name: Process quarantine_release list
+      include_tasks: tasks/quarantine-release.yml
+      loop: "{{ quarantine_release }}"
 
     - import_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']
