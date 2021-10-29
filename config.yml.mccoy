@@ -215,6 +215,7 @@ vscode_extensions:
 
 quarantine_release:
   - ~/Library/QuickLook/QLStephen.qlgenerator
+  - /Applications/VSCodium.app/Contents/Resources/app/bin/codium
 
 # post-install step we need to perform is installing rosetta on M1 silicon
 # "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"

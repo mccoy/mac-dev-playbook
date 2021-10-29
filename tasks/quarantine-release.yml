@@ -1,11 +1,13 @@
 ---
 - name: Determine if file exists for quarantine check
-  stat: "{{ item }}"
+  stat:
+    path: "{{ item }}"
   register: file_check
 
 - name: Determine if file is in quarantine
-  command: "xattr -l {{ item }} | cut -f 1 -d ' ' | grep quarantine"
+  shell: "xattr -l {{ item }} | cut -f 1 -d ' ' | grep quarantine"
   register: quarantine_check
+  failed_when: quarantine_check.rc == 2
   when: file_check.stat.exists
 
 - name: Release file from quarantine
@@ -14,4 +16,4 @@
 
 - name: Restart qlmanage
   shell: "qlmanage -r ; qlmanage -r cache"
-  when: quarantine_check.rc == 1
+  when: quarantine_check.rc == 1 and {{ item }}.endswith('qlgenerator')"

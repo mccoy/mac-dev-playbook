@@ -8,3 +8,11 @@
   shell: 'sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended'
   when: not oh_my_zsh.stat.exists
 
+- name: Check to see if omz overwrote .zshrc
+  stat:
+    path: ~/.zshrc.pre-oh-my-zsh
+  register: pre_omz_zshrc
+
+- name: Revert back to pre-oh-my-zsh .zshrc
+  command: mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+  when: pre_omz_zshrc.stat.exists
