@@ -25,6 +25,5 @@
 
 - name: Install VS Code extensions
   command: "{{ code_bin }} --install-extension {{ item }}"
-  loop:
-    - "{{ vscode_extensions }}"
+  loop: "{{ vscode_extensions }}"
   when: code_bin != 'unknown'
