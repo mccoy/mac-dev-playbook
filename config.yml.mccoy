@@ -50,7 +50,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/mccoy/dotfiles.git
+dotfiles_repo: git@github.com:mccoy/dotfiles.git
 dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Documents/src/dotfiles
@@ -168,17 +168,20 @@ homebrew_cask_apps:
   - quicklookase
   - qlvideo
   - qlImageSize
+  # fonts
+  - font-anonymous-pro
+  - font-inconsolata-g
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 # mas_installed_apps: []
 mas_installed_apps:
-  - {id: 425424353, name: "The Unarchiver (4.2.4)"}
-  - {id: 1176895641, name: "Spark – Email App by Readdle (2.11.2)"}
-  - {id: 462054704, name: "Microsoft Word (16.53)"}
-  - {id: 462058435, name: "Microsoft Excel (16.53)"}
-  - {id: 462062816, name: "Microsoft PowerPoint (16.53}"}
-  - {id: 1451685025, name: "Wireguard (1.0.15)"}
-  - {id: 747648890, name: "Telegram (8.1.2)"}
+  - {id: 425424353, name: "The Unarchiver"}
+  - {id: 1176895641, name: "Spark – Email App by Readdle"}
+  - {id: 462054704, name: "Microsoft Word"}
+  - {id: 462058435, name: "Microsoft Excel"}
+  - {id: 462062816, name: "Microsoft PowerPoint"}
+  - {id: 1451685025, name: "Wireguard"}
+  - {id: 747648890, name: "Telegram"}
 mas_email: "jim_mccoy@me.com"
 mas_password: ""
 mas_signin_dialog: true
