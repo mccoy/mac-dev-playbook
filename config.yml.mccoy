@@ -3,6 +3,7 @@
 
 downloads: ~/.ansible-downloads/
 
+configure_system: true
 configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
@@ -81,10 +82,12 @@ homebrew_installed_packages:
   - git-lfs
   - go
   - gnupg
+  - gnu-tar		# needed for infra/ansible/roles/node-exporter
   - httpie
   - htop
   - iperf
   - jq
+  - kubernetes-cli
   - libevent
   - mas
   - mcrypt
@@ -114,12 +117,14 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-fonts
   - buo/cask-upgrade
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - alfred
+  - amazon-workspaces
   - bartender
   - blockblock
   - bookmacster
@@ -136,7 +141,7 @@ homebrew_cask_apps:
   - knockknock
   - licecap
   - lulu
-  - malwarebytes
+  - malwarebytes	# drops installer into Caskroom/malwarebytes/<ver> but does not install it
   - meld
   - microsoft-excel
   - microsoft-word
@@ -150,8 +155,10 @@ homebrew_cask_apps:
   - pycharm
   - ransomwhere
   - reikey
+  - sizeup
   - slack
   - slimbatterymonitor
+  - utm
   - vagrant
 #  - virtualbox
   - vlc
@@ -182,6 +189,7 @@ mas_installed_apps:
   - {id: 462062816, name: "Microsoft PowerPoint"}
   - {id: 1451685025, name: "Wireguard"}
   - {id: 747648890, name: "Telegram"}
+  - {id: 1056643111, name: "Clocker"}
 mas_email: "jim_mccoy@me.com"
 mas_password: ""
 mas_signin_dialog: true

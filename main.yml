@@ -27,6 +27,10 @@
       tags: ['dock']
 
   tasks:
+    - import_tasks: tasks/system-osx.yml
+      when: configure_system
+      tags: ['system-osx']
+
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ['sudoers']

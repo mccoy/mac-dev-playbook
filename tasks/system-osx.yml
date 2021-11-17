@@ -1,0 +1,8 @@
+---
+- name: Check to see if sshd is running
+  command: systemsetup -getremotelogin
+  register: sshd_check
+
+- name: Turn on ssh access
+  command: systemsetup -f -setremotelogin on
+  when: "'On' in sshd_check.stdout"
