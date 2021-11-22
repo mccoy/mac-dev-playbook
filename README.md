@@ -112,9 +112,9 @@ dockitems_persist:
     pos: 5
 ```
 
-Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
+Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables. JIm's version of this playbook also supports a `config.yml.username` file where the username var is the current unix username. When the main playbook is run it will first check for a username-specific config and use that if found, then it will check for `config.yml` and only if both of those are missing will it use `config.yml.default` as its source for config vars.
 
-The dotfiles playbook is also run by this playbook to install various configuration dotfiles via a [dotfiles](https://github.com/geerlingguy/dotfiles) repo, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
+The dotfiles playbook is also run by this playbook to install various configuration dotfiles via a [dotfiles](https://github.com/geerlingguy/dotfiles) repo, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration. To use your own dotfiles just clone a suitable repo and then add the repo url into the playbook config file.
 
 Finally, there are a few other preferences and settings added on for various apps and services.
 
