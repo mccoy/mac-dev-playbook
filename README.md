@@ -11,9 +11,9 @@ This playbook installs and configures most of the software I use on my Mac. Ther
 ## Installation
 
   1. Check that preliminary steps have been completed:
-    1. Perform basic setup including creating an account, icloud login, enable filevault, and set hostname
-    1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer)
-    1. For Apple silicon, ensure Rosetta is installed (`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`)
+     1. Perform basic setup including creating an account, icloud login, enable filevault, and set hostname
+     1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer)
+     1. For Apple silicon, ensure Rosetta is installed (`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`)
   1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
      1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
