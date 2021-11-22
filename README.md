@@ -35,7 +35,7 @@ This playbook installs and configures most of the software I use on my Mac. Ther
 > $ sudo scutil --set HostName "name"
 > ```
 >
-> The LocalHostName is for Rendezvous/Bonjour and cannot have spaces and is all alphanumeric and HostName is the unit hostname so must follow the standard rules for such names.
+> The LocalHostName is for Rendezvous/Bonjour and cannot have spaces and is all alphanumeric and HostName is the unix hostname so must follow the standard rules for such names.
 >
 > This will eventually become a part of the playbook but for now I am just noting it as a manual step to perform.
 
