@@ -3,6 +3,7 @@
 
 downloads: ~/.ansible-downloads/
 
+configure_system: true
 configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
@@ -50,7 +51,7 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/mccoy/dotfiles.git
+dotfiles_repo: git@github.com:mccoy/dotfiles.git
 dotfiles_repo_version: main
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/Documents/src/dotfiles
@@ -81,10 +82,12 @@ homebrew_installed_packages:
   - git-lfs
   - go
   - gnupg
+  - gnu-tar		# needed for infra/ansible/roles/node-exporter
   - httpie
   - htop
   - iperf
   - jq
+  - kubernetes-cli
   - libevent
   - mas
   - mcrypt
@@ -114,12 +117,14 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-fonts
   - buo/cask-upgrade
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - alfred
+  - amazon-workspaces
   - bartender
   - blockblock
   - bookmacster
@@ -136,7 +141,8 @@ homebrew_cask_apps:
   - knockknock
   - licecap
   - lulu
-  - malwarebytes
+  - malwarebytes	# drops installer into Caskroom/malwarebytes/<ver> but does not install it
+  - meld
   - microsoft-excel
   - microsoft-word
   - microsoft-powerpoint
@@ -149,8 +155,10 @@ homebrew_cask_apps:
   - pycharm
   - ransomwhere
   - reikey
+  - sizeup
   - slack
   - slimbatterymonitor
+  - utm
   - vagrant
 #  - virtualbox
   - vlc
@@ -167,17 +175,21 @@ homebrew_cask_apps:
   - quicklookase
   - qlvideo
   - qlImageSize
+  # fonts
+  - font-anonymous-pro
+  - font-inconsolata-g
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 # mas_installed_apps: []
 mas_installed_apps:
-  - {id: 425424353, name: "The Unarchiver (4.2.4)"}
-  - {id: 1176895641, name: "Spark – Email App by Readdle (2.11.2)"}
-  - {id: 462054704, name: "Microsoft Word (16.53)"}
-  - {id: 462058435, name: "Microsoft Excel (16.53)"}
-  - {id: 462062816, name: "Microsoft PowerPoint (16.53}"}
-  - {id: 1451685025, name: "Wireguard (1.0.15)"}
-  - {id: 747648890, name: "Telegram (8.1.2)"}
+  - {id: 425424353, name: "The Unarchiver"}
+  - {id: 1176895641, name: "Spark – Email App by Readdle"}
+  - {id: 462054704, name: "Microsoft Word"}
+  - {id: 462058435, name: "Microsoft Excel"}
+  - {id: 462062816, name: "Microsoft PowerPoint"}
+  - {id: 1451685025, name: "Wireguard"}
+  - {id: 747648890, name: "Telegram"}
+  - {id: 1056643111, name: "Clocker"}
 mas_email: "jim_mccoy@me.com"
 mas_password: ""
 mas_signin_dialog: true
@@ -215,6 +227,7 @@ vscode_extensions:
 
 quarantine_release:
   - ~/Library/QuickLook/QLStephen.qlgenerator
+  - /Applications/VSCodium.app
 
 # post-install step we need to perform is installing rosetta on M1 silicon
 # "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"

@@ -12,21 +12,24 @@
     path: "{{ quar_file }}"
   register: file_check
 
-- name: Determine if file is in quarantine
-  shell: "xattr -lr {{ quar_file }} | cut -f 2 -d ' ' | grep com.apple.quarantine"
-  register: quarantine_check
-  failed_when: quarantine_check.rc == 2
+- name: Check and release files from quarantine
   when: file_check.stat.exists
+  block:
+  - name: Determine if file is in quarantine
+    shell: "xattr -lr {{ quar_file }} | cut -f 2 -d ' ' | grep com.apple.quarantine"
+    register: quarantine_check
+    failed_when: quarantine_check.rc == 2
+    when: file_check.stat.exists
 
-- name: Debug logging
-  ansible.builtin.debug:
-    msg: Quarantine hit for {{ quar_file }}
-  when: quarantine_check.rc == 1
+  - name: Debug logging
+    ansible.builtin.debug:
+      msg: Quarantine hit for {{ quar_file }}
+    when: quarantine_check.rc == 1
 
-- name: Release file from quarantine
-  command: "xattr -dr com.apple.quarantine {{ quar_file }}"
-  when: quarantine_check.rc == 1
+  - name: Release file from quarantine
+    command: "xattr -dr com.apple.quarantine {{ quar_file }}"
+    when: quarantine_check.rc == 1
 
-- name: Restart qlmanage
-  shell: "qlmanage -r ; qlmanage -r cache"
-  when: quarantine_check.rc == 1 and quar_file.endswith('qlgenerator')
+  - name: Restart qlmanage
+    shell: "qlmanage -r ; qlmanage -r cache"
+    when: quarantine_check.rc == 1 and quar_file.endswith('qlgenerator')
