@@ -12,13 +12,13 @@ This playbook installs and configures most of the software I use on my Mac. Ther
 
   1. Check that preliminary steps have been completed:
     1. Perform basic setup including creating an account, icloud login, enable filevault, and set hostname
-    2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer)
-    3. For Apple silicon, ensure Rosetta is installed (`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`)
+    1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer)
+    1. For Apple silicon, ensure Rosetta is installed (`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`)
   1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
      1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
-     2. Upgrade Pip: `sudo pip3 install --upgrade pip`
-     3. Install Ansible: `pip3 install ansible`
+     1. Upgrade Pip: `sudo pip3 install --upgrade pip`
+     1. Install Ansible: `pip3 install ansible`
 
   1. Install homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   1. Install git: `brew install git`
@@ -29,9 +29,11 @@ This playbook installs and configures most of the software I use on my Mac. Ther
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
 > Note: You can set the hostname using System Preferences > Sharing but a more complete name config can be performed with the following commands:
+> ```
 > $ sudo scutil --set ComputerName "name"
 > $ sudo scutil --set LocalHostName "name"
 > $ sudo scutil --set HostName "name"
+> ```
 >
 > The LocalHostName is for Rendezvous/Bonjour and cannot have spaces and is all alphanumeric and HostName is the unit hostname so must follow the standard rules for such names.
 >
