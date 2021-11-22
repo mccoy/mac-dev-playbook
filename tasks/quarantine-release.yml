@@ -24,12 +24,12 @@
   - name: Debug logging
     ansible.builtin.debug:
       msg: Quarantine hit for {{ quar_file }}
-    when: quarantine_check.rc == 1
+    when: quarantine_check.rc == 0
 
   - name: Release file from quarantine
     command: "xattr -dr com.apple.quarantine {{ quar_file }}"
-    when: quarantine_check.rc == 1
+    when: quarantine_check.rc == 0
 
   - name: Restart qlmanage
     shell: "qlmanage -r ; qlmanage -r cache"
-    when: quarantine_check.rc == 1 and quar_file.endswith('qlgenerator')
+    when: quarantine_check.rc == 0 and quar_file.endswith('qlgenerator')
