@@ -67,6 +67,7 @@ dotfiles_files:
   - .zshenv
   - .zshrc
 
+homebrew_upgrade_all_packages: true		# will upgrade on every run
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - autoconf
@@ -121,6 +122,7 @@ homebrew_taps:
   - buo/cask-upgrade
 
 homebrew_cask_appdir: /Applications
+homebrew_cask_accept_external_apps: true	# If false the playbook will fail if cask-avail app is already installed manually
 homebrew_cask_apps:
   - 1password
   - alfred
@@ -158,6 +160,7 @@ homebrew_cask_apps:
   - sizeup
   - slack
   - slimbatterymonitor
+  - the-clock
   - utm
   - vagrant
 #  - virtualbox
@@ -183,13 +186,13 @@ homebrew_cask_apps:
 # mas_installed_apps: []
 mas_installed_apps:
   - {id: 425424353, name: "The Unarchiver"}
-  - {id: 1176895641, name: "Spark – Email App by Readdle"}
+  - {id: 1176895641, name: "Spark"}
   - {id: 462054704, name: "Microsoft Word"}
   - {id: 462058435, name: "Microsoft Excel"}
   - {id: 462062816, name: "Microsoft PowerPoint"}
   - {id: 1451685025, name: "Wireguard"}
   - {id: 747648890, name: "Telegram"}
-  - {id: 1056643111, name: "Clocker"}
+  - {id: 1591303229, name: "Vinegar"}
 mas_email: "jim_mccoy@me.com"
 mas_password: ""
 mas_signin_dialog: true
