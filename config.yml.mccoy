@@ -64,6 +64,7 @@ dotfiles_files:
   - .gitignore
   - .inputrc
   - .osx
+  - .zprofile
   - .zshenv
   - .zshrc
 
