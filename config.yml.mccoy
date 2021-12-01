@@ -63,6 +63,7 @@ dotfiles_files:
   - .gitconfig
   - .gitignore
   - .inputrc
+  - .oh-my-zsh/custom
   - .osx
   - .zprofile
   - .zshenv
