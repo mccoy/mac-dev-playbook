@@ -89,6 +89,7 @@ homebrew_installed_packages:
   - httpie
   - htop
   - iperf
+  - jc
   - jq
   - kubernetes-cli
   - libevent
@@ -242,4 +243,7 @@ quarantine_release:
 #
 # also want to install oh my zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-
+#
+# additional bitof setup to add:
+# - configure screens and display layout using https://github.com/jakehilborn/displayplacer
+#
