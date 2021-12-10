@@ -79,6 +79,7 @@ homebrew_installed_packages:
   - black
   - doxygen
   - elixir
+  - fd
   - gettext
   - gifsicle
   - git
@@ -151,6 +152,7 @@ homebrew_cask_apps:
   - microsoft-excel
   - microsoft-word
   - microsoft-powerpoint
+  - miro
   - multipass
   - obsidian
   - osquery
