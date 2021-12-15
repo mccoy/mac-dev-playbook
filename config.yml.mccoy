@@ -110,6 +110,7 @@ homebrew_installed_packages:
   - rustup-init
   - ssh-copy-id
   - sqlite
+  - stern
   - termtosvg
   - terraform
   - tmux
