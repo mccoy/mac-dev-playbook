@@ -65,6 +65,7 @@ dotfiles_files:
   - .inputrc
   - .oh-my-zsh/custom
   - .osx
+  - .tmux.conf
   - .zprofile
   - .zshenv
   - .zshrc
