@@ -66,6 +66,7 @@ dotfiles_files:
   - .oh-my-zsh/custom
   - .osx
   - .tmux.conf
+  - .vimrc
   - .zprofile
   - .zshenv
   - .zshrc
@@ -94,6 +95,7 @@ homebrew_installed_packages:
   - jc
   - jq
   - kubernetes-cli
+  - kustomize
   - libevent
   - mas
   - mcrypt
