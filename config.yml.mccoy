@@ -59,6 +59,7 @@ dotfiles_files:
   - .aliases
   - .bash_profile
   - .bashrc
+  - .emacs.d/init.el
   - .gitattributes
   - .gitconfig
   - .gitignore
@@ -89,14 +90,18 @@ homebrew_installed_packages:
   - go
   - gnupg
   - gnu-tar		# needed for infra/ansible/roles/node-exporter
+  - gron
   - httpie
   - htop
   - iperf
   - jc
+  - jless
   - jq
+  - kubelogin
   - kubernetes-cli
   - kustomize
   - libevent
+  - lima
   - mas
   - mcrypt
   - mosh
@@ -118,6 +123,7 @@ homebrew_installed_packages:
   - terraform
   - tmux
   - vault
+  - watch
   - wget
   - wireguard-tools
   - yq
@@ -128,6 +134,7 @@ homebrew_taps:
   - homebrew/cask
   - homebrew/cask-fonts
   - buo/cask-upgrade
+  - Azure/kubelogin
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_accept_external_apps: true	# If false the playbook will fail if cask-avail app is already installed manually
@@ -140,7 +147,9 @@ homebrew_cask_apps:
   - bookmacster
   - chromedriver
   - docker
+  - drawio
   - eloston-chromium
+  - emacs
   - firefox
   - google-chrome
   - google-drive
@@ -149,6 +158,7 @@ homebrew_cask_apps:
   - iterm2
   - karabiner-elements
   - knockknock
+  - librewolf
   - licecap
   - lulu
   - malwarebytes	# drops installer into Caskroom/malwarebytes/<ver> but does not install it
@@ -169,6 +179,8 @@ homebrew_cask_apps:
   - sizeup
   - slack
   - slimbatterymonitor
+  - stats
+  - tableplus
   - the-clock
   - utm
   - vagrant
@@ -176,6 +188,7 @@ homebrew_cask_apps:
   - vlc
   - vscodium
   - webex-meetings
+  - xbar
   - zoom
   # some quicklook plugins
   - qlcolorcode
@@ -190,6 +203,9 @@ homebrew_cask_apps:
   # fonts
   - font-anonymous-pro
   - font-inconsolata-g
+  - font-inconsolata-nerd-font
+  - font-jetbrains-mono
+  - font-jetbrains-mono-nerd-font
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 # mas_installed_apps: []
@@ -240,6 +256,7 @@ vscode_extensions:
 quarantine_release:
   - ~/Library/QuickLook/QLStephen.qlgenerator
   - /Applications/VSCodium.app
+  - /Applications/Emacs.app
 
 # post-install step we need to perform is installing rosetta on M1 silicon
 # "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"
