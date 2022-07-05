@@ -80,12 +80,14 @@ homebrew_installed_packages:
   - azure-cli
   - bash-completion
   - black
+  - dog
   - doxygen
   - elixir
   - fd
   - gettext
   - gifsicle
   - git
+  - git-crypt
   - git-lfs
   - go
   - gnupg
@@ -97,14 +99,17 @@ homebrew_installed_packages:
   - jc
   - jless
   - jq
+  - komiser
   - kubelogin
   - kubernetes-cli
   - kustomize
+  - lazydocker
   - libevent
   - lima
   - mas
   - mcrypt
   - mosh
+  - m1-terraform-provider-helper
   - nmap
   - node
   - nvm
@@ -127,14 +132,17 @@ homebrew_installed_packages:
   - wget
   - wireguard-tools
   - yq
+  - zbar
   - zoxide
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - homebrew/cask-fonts
-  - buo/cask-upgrade
-  - Azure/kubelogin
+  - buo/cask-upgrade		# 'brew cu -a'
+  - Azure/kubelogin		# azure kubelogin
+  - komiserio/komiser		# for komiser
+  - kreuzwerker/taps		# for m1-terraform-provider-helper
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_accept_external_apps: true	# If false the playbook will fail if cask-avail app is already installed manually
@@ -145,12 +153,14 @@ homebrew_cask_apps:
   - bartender
   - blockblock
   - bookmacster
+  - cakebrew
   - chromedriver
   - docker
   - drawio
   - eloston-chromium
   - emacs
   - firefox
+  - gather
   - google-chrome
   - google-drive
   - grandperspective
@@ -172,10 +182,12 @@ homebrew_cask_apps:
   - osquery
   - osxfuse
   - oversight
+  - pgadmin4
   - pritunl
   - pycharm
   - ransomwhere
   - reikey
+  - screens-connect
   - sizeup
   - slack
   - slimbatterymonitor
