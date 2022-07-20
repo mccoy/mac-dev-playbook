@@ -129,6 +129,7 @@ homebrew_installed_packages:
   - tmux
   - vault
   - watch
+  - websocat
   - wget
   - wireguard-tools
   - yq
@@ -138,6 +139,7 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-drivers	# for displaylink
   - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
@@ -151,10 +153,13 @@ homebrew_cask_apps:
   - alfred
   - amazon-workspaces
   - bartender
+  - betterdisplay
+  - blackhole-2ch
   - blockblock
   - bookmacster
   - cakebrew
   - chromedriver
+  - displaylink
   - docker
   - drawio
   - eloston-chromium
@@ -227,6 +232,7 @@ mas_installed_apps:
   - {id: 462054704, name: "Microsoft Word"}
   - {id: 462058435, name: "Microsoft Excel"}
   - {id: 462062816, name: "Microsoft PowerPoint"}
+  - {id: 1365531024, name: "1Blocker"}
   - {id: 1451685025, name: "Wireguard"}
   - {id: 747648890, name: "Telegram"}
   - {id: 1591303229, name: "Vinegar"}
