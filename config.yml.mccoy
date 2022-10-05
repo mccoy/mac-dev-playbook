@@ -206,6 +206,7 @@ homebrew_cask_apps:
   - vscodium
   - webex-meetings
   - xbar
+  - yubico-yubikey-manager
   - zoom
   # some quicklook plugins
   - qlcolorcode
