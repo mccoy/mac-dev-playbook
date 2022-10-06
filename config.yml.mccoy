@@ -40,8 +40,8 @@ dockitems_persist:
 - name: "PyCharm"
   path: "/Applications/PyCharm.app/"
   pos: 3
-- name: "Spark"
-  path: "/Applications/Spark.app/"
+- name: "Mail"
+  path: "/Applications/Mail.app/"
   pos: 4
 
 configure_sudoers: false
@@ -167,6 +167,7 @@ homebrew_cask_apps:
   - emacs
   - firefox
   - gather
+  - gpg-suite
   - google-chrome
   - google-drive
   - grandperspective
@@ -230,7 +231,6 @@ homebrew_cask_apps:
 # mas_installed_apps: []
 mas_installed_apps:
   - {id: 425424353, name: "The Unarchiver"}
-  - {id: 1176895641, name: "Spark"}
   - {id: 462054704, name: "Microsoft Word"}
   - {id: 462058435, name: "Microsoft Excel"}
   - {id: 462062816, name: "Microsoft PowerPoint"}
