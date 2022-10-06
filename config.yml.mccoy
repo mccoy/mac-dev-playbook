@@ -132,6 +132,7 @@ homebrew_installed_packages:
   - websocat
   - wget
   - wireguard-tools
+  - ykman
   - yq
   - zbar
   - zoxide
