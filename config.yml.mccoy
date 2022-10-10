@@ -194,6 +194,7 @@ homebrew_cask_apps:
   - pycharm
   - ransomwhere
   - reikey
+  - santa
   - screens-connect
   - sizeup
   - slack
@@ -206,7 +207,6 @@ homebrew_cask_apps:
 #  - virtualbox
   - vlc
   - vscodium
-  - webex-meetings
   - xbar
   - yubico-yubikey-manager
   - zoom
