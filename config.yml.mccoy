@@ -128,6 +128,7 @@ homebrew_installed_packages:
   - terraform
   - tmux
   - vault
+  - visidata
   - watch
   - websocat
   - wget
@@ -146,6 +147,7 @@ homebrew_taps:
   - Azure/kubelogin		# azure kubelogin
   - komiserio/komiser		# for komiser
   - kreuzwerker/taps		# for m1-terraform-provider-helper
+  - saulpw/vd			# for visidata
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_accept_external_apps: true	# If false the playbook will fail if cask-avail app is already installed manually
@@ -155,7 +157,7 @@ homebrew_cask_apps:
   - amazon-workspaces
   - bartender
   - betterdisplay
-  - blackhole-2ch
+  - blackhole-2ch            # audio blackhole device to mute individual aps 
   - blockblock
   - bookmacster
   - cakebrew
@@ -166,6 +168,7 @@ homebrew_cask_apps:
   - eloston-chromium
   - emacs
   - firefox
+  - franz                    # kafka client
   - gather
   - gpg-suite
   - google-chrome
@@ -200,6 +203,7 @@ homebrew_cask_apps:
   - slack
   - slimbatterymonitor
   - stats
+  - superduper
   - tableplus
   - the-clock
   - utm
