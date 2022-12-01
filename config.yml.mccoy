@@ -169,7 +169,6 @@ homebrew_cask_apps:
   - emacs
   - firefox
   - franz                    # kafka client
-  - gather
   - gpg-suite
   - google-chrome
   - google-drive
