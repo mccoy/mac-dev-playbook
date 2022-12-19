@@ -4,5 +4,3 @@
   command: "{{ osx_script }}"
   changed_when: false
 
-# More apple config bits at https://git.herrbischoff.com/awesome-macos-command-line/about/
-
