@@ -116,11 +116,56 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 
 The dotfiles playbook is also run by this playbook to install various configuration dotfiles via a [dotfiles](https://github.com/geerlingguy/dotfiles) repo, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration. To use your own dotfiles just clone a suitable repo and then add the repo url into the playbook config file.
 
+## Included Applications / Configuration (Default)
+
+Applications (installed with Homebrew Cask):
+
+  - [ChromeDriver](https://sites.google.com/chromium.org/driver/)
+  - [Docker](https://www.docker.com/)
+  - [Dropbox](https://www.dropbox.com/)
+  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+  - [Google Chrome](https://www.google.com/chrome/)
+  - [Handbrake](https://handbrake.fr/)
+  - [Homebrew](http://brew.sh/)
+  - [LICEcap](http://www.cockos.com/licecap/)
+  - [nvALT](http://brettterpstra.com/projects/nvalt/)
+  - [Sequel Ace](https://sequel-ace.com) (MySQL client)
+  - [Slack](https://slack.com/)
+
+Packages (installed with Homebrew):
+
+  - autoconf
+  - bash-completion
+  - doxygen
+  - gettext
+  - gifsicle
+  - git
+  - github/gh/gh
+  - go
+  - gpg
+  - httpie
+  - iperf
+  - libevent
+  - sqlite
+  - mcrypt
+  - nmap
+  - node
+  - nvm
+  - php
+  - ssh-copy-id
+  - cowsay
+  - readline
+  - openssl
+  - pv
+  - wget
+  - wrk
+  - zsh-history-substring-search
+
 Finally, there are a few other preferences and settings added on for various apps and services.
 
-## Future additions
+## Full / From-scratch setup guide
 
-### Things that still need to be done manually
+Since I've used this playbook to set up something like 20 different Macs, I decided to write up a full 100% from-scratch install for my own reference (everyone's particular install will be slightly different).
 
 It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
@@ -131,11 +176,11 @@ It's my hope that I can get the rest of these things wrapped up into Ansible pla
   6. Set mouse tracking rate.
   7. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
 
+You can see my full from-scratch setup document here: [full-mac-setup.md](full-mac-setup.md).
+
 ## Testing the Playbook
 
 Jeff has posted instructions for how he builds a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which he can continually run and re-run this playbook to test changes and make sure things work correctly.
-
-Additionally, this project is [continuously tested on GitHub Actions' macOS infrastructure](https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI). (This is currently turned off.)
 
 ## Author
 

@@ -27,7 +27,7 @@
     when: quarantine_check.rc == 0
 
   - name: Release file from quarantine
-    command: "xattr -dr com.apple.quarantine {{ quar_file }}"
+    command: "xattr -d -r com.apple.quarantine {{ quar_file }}"
     when: quarantine_check.rc == 0
 
   - name: Restart qlmanage
