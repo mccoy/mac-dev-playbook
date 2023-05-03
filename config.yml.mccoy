@@ -187,6 +187,7 @@ homebrew_cask_apps:
   - microsoft-powerpoint
   - miro
   - multipass
+  - netspot
   - obsidian
   - osquery
   - osxfuse
