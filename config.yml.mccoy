@@ -120,12 +120,15 @@ homebrew_installed_packages:
   - pyenv-virtualenvwrapper
   - readline
   - redis
+  - ripgrep
+  - ripgrep-all
   - rustup-init
   - ssh-copy-id
   - sqlite
   - stern
   - termtosvg
   - terraform
+  - terrascan
   - tmux
   - vault
   - visidata
@@ -155,7 +158,9 @@ homebrew_cask_apps:
   - 1password
   - alfred
   - amazon-workspaces
+  - backblaze
   - bartender
+  - balenaetcher
   - betterdisplay
   - blackhole-2ch            # audio blackhole device to mute individual aps 
   - blockblock
@@ -194,7 +199,9 @@ homebrew_cask_apps:
   - pgadmin4
   - pritunl
   - pycharm
+  - raindropio
   - ransomwhere
+  - red-canary-mac-monitor
   - reikey
   - santa
   - screens-connect
@@ -284,12 +291,16 @@ quarantine_release:
 # post-install step we need to perform is installing rosetta on M1 silicon
 # "/usr/sbin/softwareupdate --install-rosetta --agree-to-license"
 #
-# also need the dns-heaven fix for gp bins like vault
+# also need the dns-heaven fix for go binaries like vault, since they ignore
+# the OS DNS mechanism
+#
 # https://github.com/greenboxal/dns-heaven/
 #
 # also want to install oh my zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 #
 # additional bitof setup to add:
-# - configure screens and display layout using https://github.com/jakehilborn/displayplacer
+# - configure screens and display layout
+#   - using https://github.com/jakehilborn/displayplacer
+# - set up mission control and apps that get locked to specific screens?
 #
