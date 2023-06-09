@@ -195,6 +195,7 @@ homebrew_cask_apps:
   - miro
   - multipass
   - obsidian
+  - orbstack
   - osquery
   - osxfuse
   - oversight
