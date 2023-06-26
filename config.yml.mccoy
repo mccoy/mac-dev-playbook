@@ -218,8 +218,8 @@ homebrew_cask_apps:
   - utm
   - vagrant
 #  - virtualbox
+  - visual-studio-code
   - vlc
-  - vscodium
   - xbar
   - yubico-yubikey-manager
   - zoom
@@ -237,6 +237,7 @@ homebrew_cask_apps:
   - font-anonymous-pro
   - font-inconsolata-g
   - font-inconsolata-nerd-font
+  - font-inter
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
 
