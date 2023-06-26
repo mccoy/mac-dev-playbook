@@ -94,6 +94,7 @@ homebrew_installed_packages:
   - gnupg
   - gnu-tar		# needed for infra/ansible/roles/node-exporter
   - gron
+  - hopenpgp-tools	# for gpg/yubi setup a la DrDuh guide
   - httpie
   - htop
   - iperf
@@ -139,6 +140,7 @@ homebrew_installed_packages:
   - wireguard-tools
   - ykman
   - yq
+  - yubikey-personalization	# for gpg/yubi setup a la DrDuh guide
   - zbar
   - zoxide
 
