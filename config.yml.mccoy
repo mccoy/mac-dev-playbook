@@ -147,7 +147,6 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-  - homebrew/cask-drivers	# for displaylink
   - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
@@ -195,6 +194,7 @@ homebrew_cask_apps:
   - microsoft-word
   - microsoft-powerpoint
   - miro
+  - mullvadvpn
   - multipass
   - obsidian
   - orbstack

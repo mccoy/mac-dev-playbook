@@ -18,7 +18,11 @@ This playbook installs and configures most of the software I use on my Mac. Ther
 
      1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
      1. Upgrade Pip: `sudo pip3 install --upgrade pip`
-     1. Install Ansible: `pip3 install ansible`
+     1. If pip fails with a PackageFinder error then the command line tools need to be updated
+       1. From the terminal run: softwareupdate --list which produces a list of available updates.
+       1. "Command Line Tools for Xcode-<SOME_VERSION>" should be on that list
+       1. Run: softwareupdate -i "Command Line Tools for Xcode-<SOME_VERSION>" from previous output. This will then install the updates and the fix for python3. It may take a long time to run.
+     1. Install Ansible insto system python: `sudo pip3 install ansible`
 
   1. Install homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
   1. Install git: `brew install git`
