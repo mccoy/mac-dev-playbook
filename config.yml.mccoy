@@ -160,6 +160,7 @@ homebrew_cask_apps:
   - 1password
   - alfred
   - amazon-workspaces
+  - appcleaner
   - backblaze
   - bartender
   - balenaetcher
