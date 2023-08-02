@@ -196,6 +196,7 @@ homebrew_cask_apps:
   - microsoft-word
   - microsoft-powerpoint
   - miro
+  - mullvadvpn
   - multipass
   - obsidian
   - orbstack
