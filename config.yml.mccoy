@@ -110,7 +110,7 @@ homebrew_installed_packages:
   - libevent
   - lima
   - mas
-  - mcrypt
+  # - mcrypt
   - mosh
   - m1-terraform-provider-helper
   - nmap
@@ -243,7 +243,7 @@ homebrew_cask_apps:
   - qlImageSize
   # fonts
   - font-anonymous-pro
-  - font-inconsolata-g
+  # - font-inconsolata-g
   - font-inconsolata-nerd-font
   - font-inter
   - font-jetbrains-mono
