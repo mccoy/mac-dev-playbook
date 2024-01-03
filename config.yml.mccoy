@@ -145,8 +145,8 @@ homebrew_installed_packages:
   - zoxide
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
+#  - homebrew/core
+#  - homebrew/cask
   - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
