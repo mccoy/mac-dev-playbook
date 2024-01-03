@@ -75,6 +75,7 @@ dotfiles_files:
 homebrew_upgrade_all_packages: true		# will upgrade on every run
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
+  - asciinema
   - autoconf
   - awscli
   - azure-cli
@@ -128,9 +129,9 @@ homebrew_installed_packages:
   - ssh-copy-id
   - sqlite
   - stern
-  - termtosvg
   - terraform
   - terrascan
+  - the_silver_searcher
   - tmux
   - vault
   - visidata
@@ -161,7 +162,8 @@ homebrew_cask_apps:
   - alfred
   - amazon-workspaces
   - appcleaner
-#  - backblaze
+  - app-tamer
+#  - backblaze               # quarantine causes problems, install normally
   - bartender
   - balenaetcher
   - betterdisplay
@@ -201,12 +203,14 @@ homebrew_cask_apps:
   - multipass
   - obsidian
   - orbstack
+  - orion
   - osquery
   - osxfuse
   - oversight
   - pgadmin4
   - pritunl
   - pycharm
+  - racket
   - raindropio
   - ransomwhere
   - red-canary-mac-monitor
