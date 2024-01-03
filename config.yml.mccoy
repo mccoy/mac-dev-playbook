@@ -205,7 +205,6 @@ homebrew_cask_apps:
   - orbstack
   - orion
   - osquery
-  - osxfuse
   - oversight
   - pgadmin4
   - pritunl
