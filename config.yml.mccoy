@@ -230,6 +230,7 @@ homebrew_cask_apps:
   - vlc
   - xbar
   - yubico-yubikey-manager
+  - zerotier-one
   - zoom
   # some quicklook plugins
   - qlcolorcode
