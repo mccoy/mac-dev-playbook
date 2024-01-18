@@ -170,7 +170,6 @@ homebrew_cask_apps:
   - blackhole-2ch            # audio blackhole device to mute individual aps 
   - blockblock
   - bookmacster
-  - cakebrew
   - chromedriver
   - cleanmymac
   - dangerzone
