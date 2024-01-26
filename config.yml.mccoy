@@ -206,7 +206,7 @@ homebrew_cask_apps:
   - osquery
   - oversight
   - pgadmin4
-  - pritunl
+  # - pritunl           # not really needed except for work, so consider removing
   - pycharm
   - racket
   - raindropio
