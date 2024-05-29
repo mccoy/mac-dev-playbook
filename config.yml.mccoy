@@ -232,8 +232,8 @@ homebrew_cask_apps:
   - zerotier-one
   - zoom
   # some quicklook plugins
-  - qlcolorcode
-  - qlstephen
+#  - qlcolorcode
+#  - qlstephen
   - qlmarkdown
   - quicklook-json
   - webpquicklook
