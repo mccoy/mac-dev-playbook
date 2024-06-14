@@ -124,6 +124,7 @@ homebrew_installed_packages:
   - nvm
   - openssl
   - podman
+  - podman-compose
   - postgresql
   - pyenv
   - pyenv-virtualenv
