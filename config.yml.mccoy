@@ -82,6 +82,8 @@ homebrew_installed_packages:
   - bash-completion
   - black
   - colima
+  - delve
+  - dive
   - dog
   - doxygen
   - elixir
@@ -94,13 +96,17 @@ homebrew_installed_packages:
   - go
   - gnupg
   - gnu-tar		# needed for infra/ansible/roles/node-exporter
+  - golang-migrate      # needed for tsdb schema migrations
   - gron
+  - hashicorp/tap/terraform
   - hopenpgp-tools	# for gpg/yubi setup a la DrDuh guide
   - httpie
   - htop
   - iperf
   - jc
   - jless
+  - jnv
+  - jordanbaird-ice
   - jq
   - komiser
   - kubelogin
@@ -117,6 +123,7 @@ homebrew_installed_packages:
   - node
   - nvm
   - openssl
+  - podman
   - postgresql
   - pyenv
   - pyenv-virtualenv
@@ -129,7 +136,6 @@ homebrew_installed_packages:
   - ssh-copy-id
   - sqlite
   - stern
-  - terraform
   - terrascan
   - the_silver_searcher
   - tmux
@@ -142,18 +148,19 @@ homebrew_installed_packages:
   - ykman
   - yq
   - yubikey-personalization	# for gpg/yubi setup a la DrDuh guide
-  - zbar
+  - zbar                        # decodeing 2fa QR codes for adding to vault
   - zoxide
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-  - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
   - komiserio/komiser		# for komiser
   - kreuzwerker/taps		# for m1-terraform-provider-helper
   - saulpw/vd			# for visidata
+  - hashicorp/tap               # for terraform
+  - ynqa/tap			# for jnv
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_accept_external_apps: true	# If false the playbook will fail if cask-avail app is already installed manually
@@ -164,13 +171,14 @@ homebrew_cask_apps:
   - appcleaner
   - app-tamer
 #  - backblaze               # quarantine causes problems, install normally
-  - bartender
+#  - bartender
   - balenaetcher
   - betterdisplay
   - blackhole-2ch            # audio blackhole device to mute individual aps 
   - blockblock
   - bookmacster
   - cakebrew
+  - choosy
   - chromedriver
   - cleanmymac
   - dangerzone
@@ -208,6 +216,7 @@ homebrew_cask_apps:
   - osxfuse
   - oversight
   - pgadmin4
+  - podman-desktop
   - pritunl
   - pycharm
   - racket
@@ -229,6 +238,7 @@ homebrew_cask_apps:
 #  - virtualbox
   - visual-studio-code
   - vlc
+  - wireshark
   - xbar
   - yubico-yubikey-manager
   - zoom
