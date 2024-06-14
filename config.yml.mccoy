@@ -116,7 +116,7 @@ homebrew_installed_packages:
   - libevent
   - lima
   - mas
-  - mcrypt
+  # - mcrypt
   - mosh
   - m1-terraform-provider-helper
   - nmap
@@ -152,8 +152,9 @@ homebrew_installed_packages:
   - zoxide
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
+#  - homebrew/core
+#  - homebrew/cask
+  - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
   - komiserio/komiser		# for komiser
@@ -213,11 +214,10 @@ homebrew_cask_apps:
   - orbstack
   - orion
   - osquery
-  - osxfuse
   - oversight
   - pgadmin4
   - podman-desktop
-  - pritunl
+  # - pritunl           # not really needed except for work, so consider removing
   - pycharm
   - racket
   - raindropio
@@ -241,10 +241,11 @@ homebrew_cask_apps:
   - wireshark
   - xbar
   - yubico-yubikey-manager
+  - zerotier-one
   - zoom
   # some quicklook plugins
-  - qlcolorcode
-  - qlstephen
+#  - qlcolorcode
+#  - qlstephen
   - qlmarkdown
   - quicklook-json
   - webpquicklook
@@ -254,7 +255,7 @@ homebrew_cask_apps:
   - qlImageSize
   # fonts
   - font-anonymous-pro
-  - font-inconsolata-g
+  # - font-inconsolata-g
   - font-inconsolata-nerd-font
   - font-inter
   - font-jetbrains-mono
