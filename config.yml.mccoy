@@ -155,7 +155,7 @@ homebrew_installed_packages:
 homebrew_taps:
 #  - homebrew/core
 #  - homebrew/cask
-  - homebrew/cask-fonts
+#  - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
   - komiserio/komiser		# for komiser
@@ -188,7 +188,6 @@ homebrew_cask_apps:
   - displaylink
   - docker
   - drawio
-  - eloston-chromium
   - emacs
   - firefox
   - franz                    # kafka client
