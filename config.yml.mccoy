@@ -202,6 +202,7 @@ homebrew_cask_apps:
   - librewolf
   - licecap
   - lulu
+  - macdown
   - malwarebytes	# drops installer into Caskroom/malwarebytes/<ver> but does not install it
   - meld
   - microsoft-excel
