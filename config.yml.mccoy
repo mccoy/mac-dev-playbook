@@ -199,7 +199,6 @@ homebrew_cask_apps:
   - iterm2
   - karabiner-elements
   - knockknock
-  - librewolf
   - licecap
   - lulu
   - macdown
