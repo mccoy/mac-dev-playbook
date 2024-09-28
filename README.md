@@ -16,7 +16,7 @@ This playbook installs and configures most of the software I use on my Mac. Ther
      1. For Apple silicon, ensure Rosetta is installed (`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`)
   1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
-     1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.8/bin:/opt/homebrew/bin:$PATH"`
+     1. Run the following command to add Python 3 to your $PATH: `export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"`
      1. Upgrade Pip: `sudo pip3 install --upgrade pip`
      1. If pip fails with a PackageFinder error then the command line tools need to be updated
        1. From the terminal run: softwareupdate --list which produces a list of available updates.

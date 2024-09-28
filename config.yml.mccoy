@@ -104,6 +104,7 @@ homebrew_installed_packages:
   - htop
   - iperf
   - jc
+  - jd
   - jless
   - jnv
   - jordanbaird-ice
@@ -179,7 +180,7 @@ homebrew_cask_apps:
   - blackhole-2ch            # audio blackhole device to mute individual aps 
   - blockblock
   - bookmacster
-  - cakebrew
+#  - cakebrew
   - choosy
   - chromedriver
   - cleanmymac
@@ -202,14 +203,14 @@ homebrew_cask_apps:
   - licecap
   - lulu
   - macdown
-  - malwarebytes	# drops installer into Caskroom/malwarebytes/<ver> but does not install it
+#  - malwarebytes	# drops installer into Caskroom/malwarebytes/<ver> but does not install it
   - meld
   - microsoft-excel
   - microsoft-word
   - microsoft-powerpoint
   - mountain-duck
   - mullvadvpn
-  - multipass
+#  - multipass
   - obsidian
   - orbstack
   - orion
@@ -220,7 +221,7 @@ homebrew_cask_apps:
   # - pritunl           # not really needed except for work, so consider removing
   - pycharm
   - racket
-  - raindropio
+#  - raindropio
   - ransomwhere
   - red-canary-mac-monitor
   - reikey
