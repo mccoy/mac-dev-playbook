@@ -117,7 +117,6 @@ homebrew_installed_packages:
   - libevent
   - lima
   - mas
-  # - mcrypt
   - mosh
   - m1-terraform-provider-helper
   - nmap
@@ -154,9 +153,6 @@ homebrew_installed_packages:
   - zoxide
 
 homebrew_taps:
-#  - homebrew/core
-#  - homebrew/cask
-#  - homebrew/cask-fonts
   - buo/cask-upgrade		# 'brew cu -a'
   - Azure/kubelogin		# azure kubelogin
   - komiserio/komiser		# for komiser
@@ -174,7 +170,6 @@ homebrew_cask_apps:
   - appcleaner
   - app-tamer
 #  - backblaze               # quarantine causes problems, install normally
-#  - bartender
   - balenaetcher
   - betterdisplay
   - blackhole-2ch            # audio blackhole device to mute individual aps 
@@ -218,10 +213,8 @@ homebrew_cask_apps:
   - oversight
   - pgadmin4
   - podman-desktop
-  # - pritunl           # not really needed except for work, so consider removing
   - pycharm
   - racket
-#  - raindropio
   - ransomwhere
   - red-canary-mac-monitor
   - reikey
@@ -236,13 +229,12 @@ homebrew_cask_apps:
   - the-clock
   - utm
   - vagrant
-#  - virtualbox
   - visual-studio-code
   - vlc
   - wireshark
   - xbar
   - yubico-yubikey-manager
-  - zerotier-one
+#  - zerotier-one
   - zoom
   # some quicklook plugins
 #  - qlcolorcode
