@@ -186,7 +186,7 @@ homebrew_cask_apps:
   - cleanmymac
   - dangerzone
   - dash
-  - displaylink
+#  - displaylink
   - docker
   - drawio
   - emacs
